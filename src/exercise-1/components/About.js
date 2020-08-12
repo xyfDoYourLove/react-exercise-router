@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class About extends React.Component{
     render() {
-        return <div>
+        return <div className='content'>
             <div>
                 Company: ThoughtWorks Local
                 Location: Bei'Jing
