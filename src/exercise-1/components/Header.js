@@ -2,21 +2,56 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class Home extends React.Component{
+    
+    state = {
+        home: <Link style={{ textDecoration:'none'}} to='/'>Home</Link>,
+        profile: <Link style={{ textDecoration:'none'}} to='/my-profile'>My Profile</Link>,
+        about: <Link style={{ textDecoration:'none'}} to='/about-us'>About Us</Link>,
+    }
+
+    componentDidMount() {
+        if(window.location.pathname === '/') {
+            this.setState({
+                home: <Link to='/'>Home</Link>
+            })
+        }else {
+            this.setState({
+                home: <Link style={{ textDecoration:'none'}} to='/'>Home</Link>
+            })
+        }
+
+        if(window.location.pathname === '/my-profile') {
+            this.setState({
+                profile: <Link to='/my-profile'>My Profile</Link>
+            })
+        }else {
+            this.setState({
+                profile: <Link style={{ textDecoration:'none'}} to='/my-profile'>My Profile</Link>
+            })
+        }
+
+        if(window.location.pathname === '/about-us') {
+            this.setState({
+                about: <Link to='/about-us'>About Us</Link>
+            })
+        }else {
+            this.setState({
+                about: <Link style={{ textDecoration:'none'}} to='/about-us'>About Us</Link>
+            })
+        }
+    }
+    
     render() {
         return <div className='header'>
-            
-
-                    <div className='link'>
-                        <Link to='/'>Home</Link>
-                    </div>
-                    <div className='link'>
-                        <Link to='/my-profile'>My Profile</Link>
-                    </div>
-                    <div className='link'>
-                        <Link to='/about-us'>About Us</Link>
-                    </div>
-
-            
+            <div className='link'>
+                {this.state.home}
+            </div>
+            <div className='link'>
+                {this.state.profile}
+            </div>
+            <div className='link'>
+                {this.state.about}
+            </div>
         </div>
     }
 }

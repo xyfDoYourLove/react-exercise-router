@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header'
 
 class About extends React.Component{
     render() {
         return <div className='content'>
+            <Header />
             <div>
                 Company: ThoughtWorks Local
                 Location: Bei'Jing
