@@ -7,8 +7,14 @@ class Profile extends React.Component{
             <Header />
             <div>
                 Username: XiaoYiFan
+            </div>
+            <div>
                 Gender: Female
+            </div>
+            <div>
                 Work: IT Industry
+            </div>
+            <div>
                 Website: '/my-profile'
             </div>
         </div>
