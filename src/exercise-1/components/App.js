@@ -18,6 +18,8 @@ class App extends Component {
             <Route path='/my-profile' component={Profile} />
             <Route path='/about-us' component={About} />
             <Route path='/products' component={Products} />
+            <Route path='/goods' component={Products} />
+            <Route component={Home} />
           </Switch>
         </Router>
       </div>
